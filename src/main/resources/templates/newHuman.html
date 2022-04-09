@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>new human</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+
+<body>
+<div align = "center">
+    <h1>create new human</h1>
+
+    <div class="col-sm-4">
+
+        <form action="#" th:action="@{/save}" th:object="${human}" method="post">
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >Name</label>
+                    <td>
+                        <input type="hidden" th:field="*{humanId}" />
+                        <input type="text" th:field="*{name}" class="form-control" placeholder="Name" />
+                    </td>
+                </tr>
+            </div>
+
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >Height</label>
+                    <td>
+                        <input type="text" th:field="*{height}" class="form-control" placeholder="Height" />
+                    </td>
+                </tr>
+            </div>
+
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >Weight</label>
+                    <td>
+                        <input type="text" th:field="*{weight}" class="form-control" placeholder="Weight" />
+                    </td>
+                </tr>
+            </div>
+
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >Sex</label>
+                    <td>
+                        <input type="text" th:field="*{sex}" class="form-control" placeholder="Sex" />
+                    </td>
+                </tr>
+            </div>
+
+            <tr>
+                <td colspan="2"><button type="submit" class="mt-4 btn btn-outline-success btn-block">Save</button> </td>
+            </tr>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+
